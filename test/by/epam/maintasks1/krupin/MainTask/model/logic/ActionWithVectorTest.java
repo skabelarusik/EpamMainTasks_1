@@ -242,10 +242,87 @@ public class ActionWithVectorTest {
         assertArrayEquals(expected, ActionWithVector.sortBubbleDecrise(new VectorDouble(ParametrsForActionTest.mas1)).getVector(), delta);
     }
 
+    @Test(expected = Exception.class)
+    public void testSortInserteIfVectorIsNull() throws Exception {
+        ActionWithVector.sortInserte(new VectorDouble(ParametrsForActionTest.masDoubleNull));
+    }
 
+    @Test
+    public void testSortInserteIfVectorIs1() throws Exception {
+        double[] expected = {1};
+        assertArrayEquals(expected, ActionWithVector.sortInserte(new VectorDouble(ParametrsForActionTest.mas4)).getVector(), delta);
+    }
 
+    @Test
+    public void testSortInserte() throws Exception {
+        double [] expected = {-5000, -4500, -900.4, 0, 8, 600, 7600, 10_000.76};
+        assertArrayEquals(expected, ActionWithVector.sortInserte(new VectorDouble(ParametrsForActionTest.mas1)).getVector(), delta);
+    }
 
+    @Test(expected = Exception.class)
+    public void testSortSelectIfVectorIsNull() throws Exception {
+        ActionWithVector.sortSelect(new VectorDouble(ParametrsForActionTest.masDoubleNull));
+    }
 
+    @Test
+    public void testSortSelectIfVectorIs1() throws Exception {
+        double[] expected = {1};
+        assertArrayEquals(expected, ActionWithVector.sortSelect(new VectorDouble(ParametrsForActionTest.mas4)).getVector(), delta);
+    }
 
+    @Test
+    public void testSortSelect() throws Exception {
+        double [] expected = {-5000, -4500, -900.4, 0, 8, 600, 7600, 10_000.76};
+        assertArrayEquals(expected, ActionWithVector.sortSelect(new VectorDouble(ParametrsForActionTest.mas1)).getVector(), delta);
+    }
+
+    @Test(expected = Exception.class)
+    public void testMergeIfVectorsNonSorted() throws Exception {
+        ActionWithVector.sortMerge(new VectorDouble(ParametrsForActionTest.mas2),
+                new VectorDouble(ParametrsForActionTest.mas3));
+    }
+
+    @Test
+    public void testSortMergeIfVectorsIsNull() throws Exception {
+        double[] expected = {};
+
+        assertArrayEquals(expected, ActionWithVector.sortMerge(new VectorDouble(ParametrsForActionTest.masDoubleNull),
+                new VectorDouble(ParametrsForActionTest.masDoubleNull)).getVector(), delta);
+    }
+
+    @Test
+    public void testSortMergeIfOneVectorIsNull() throws Exception {
+        double[] expected = {9000, -500, -1500.6};
+
+        assertArrayEquals(expected, ActionWithVector.sortMerge(new VectorDouble(ParametrsForActionTest.masDoubleNull),
+                new VectorDouble(ParametrsForActionTest.masIsSortDecrise)).getVector(), delta);
+    }
+
+    @Test
+    public void testSortMerge() throws Exception {
+        double[] expected = {-4500, -4500, 7600, 7600};
+
+        assertArrayEquals(expected, ActionWithVector.sortMerge(new VectorDouble(ParametrsForActionTest.mas3),
+                new VectorDouble(ParametrsForActionTest.mas3)).getVector(), delta);
+
+    }
+
+    @Test(expected = Exception.class)
+    public void testSortQuickIfVectorIsNull() throws Exception {
+        ActionWithVector.sortQuick(new VectorDouble(ParametrsForActionTest.masDoubleNull));
+    }
+
+    @Test
+    public void testSortQuickIfVectorIs1() throws Exception {
+        double[] expected = {1};
+        assertArrayEquals(expected, ActionWithVector.sortQuick(new VectorDouble(ParametrsForActionTest.mas4)).getVector(), delta);
+    }
+
+    @Test
+    public void testSortQuick() throws Exception {
+        double [] expected = {-5000 ,-4500 ,-900.4 ,0 ,8.0 ,600, 7600 ,10_000.76};
+        assertArrayEquals(expected, ActionWithVector.sortQuick(new VectorDouble(ParametrsForActionTest.mas1)).getVector(), delta);
+    }
 
 }
+
