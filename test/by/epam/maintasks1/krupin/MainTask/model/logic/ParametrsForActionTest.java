@@ -1,6 +1,8 @@
 package by.epam.maintasks1.krupin.MainTask.model.logic;
 
 public class ParametrsForActionTest {
+    protected static double delta = 0.000006;
+
     public static double [] mas1 = {-5000, 600, 0 , -4500, 7600, 8.0, -900.4, 10_000.76};
     public static double [] mas2 = {89, -600, 44};
     public static double [] mas3 = {-4500, 7600};
