@@ -12,6 +12,10 @@ public class VectorInt {
         this.vector = new int[n];
     }
 
+    public VectorInt(VectorInt vectorInt){
+        this.vector = vectorInt.getVector();
+    }
+
     public int[] getVector() {
         return vector;
     }
