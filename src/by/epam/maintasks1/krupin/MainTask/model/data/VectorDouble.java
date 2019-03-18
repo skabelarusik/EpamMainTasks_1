@@ -19,6 +19,10 @@ public class VectorDouble {
         this.vector = new double[n];
     }
 
+    public VectorDouble(VectorDouble vectorDouble){
+        this.vector = vectorDouble.getVector();
+    }
+
 
     public double[] getVector() {
         return vector;
@@ -53,7 +57,7 @@ public class VectorDouble {
     }
 
     //Does vector have this element?
-    public void checkIndex(int a) throws Exception {
+    private void checkIndex(int a) throws Exception {
         if(a < 0 || a >= vector.length){
             throw new Exception("Wrong number");
         }
