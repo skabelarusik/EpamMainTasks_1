@@ -5,16 +5,16 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class CheckerForMatrixTest {
+public class MatrixCheckerTest {
 
     @Test
     public void checkIsMatrixNullTest(){
-        assertTrue(CheckerForMatrix.checkIsMatrixNull(new Matrix(ParamForTest.matrNull)));
+        assertTrue(MatrixChecker.checkIsMatrixNull(new Matrix(ParamTest.matrNull)));
     }
 
     @Test
     public void isSquareMatrixTest(){
-        assertTrue(CheckerForMatrix.isSquareMatrix(new Matrix(ParamForTest.matrSquareSimm)));
+        assertTrue(MatrixChecker.isSquareMatrix(new Matrix(ParamTest.matrSquareSimm)));
     }
 
 }
