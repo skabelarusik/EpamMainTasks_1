@@ -12,8 +12,11 @@ public class VectorInt {
         this.vector = new int[n];
     }
 
-    public VectorInt(VectorInt vectorInt){
-        this.vector = vectorInt.getVector();
+    public VectorInt(VectorInt vectorInt) throws Exception {
+        vector = new int [vectorInt.size()];
+        for(int i = 0; i < vectorInt.size(); i++){
+            vector[i] = new Integer(vectorInt.getElement(i));
+        }
     }
 
     public int[] getVector() {
@@ -40,19 +43,12 @@ public class VectorInt {
         return vector[numb];
     }
 
-    //Does vector have this element?
-    public void checkIndex(int a) throws Exception {
-        if(a < 0 || a >= vector.length){
-            throw new Exception("Wrong number");
-        }
-    }
-
     @Override
     public String toString() {
-        String string = "";
+        StringBuilder stringBuilder = new StringBuilder();
         for(int x : vector){
-            string += (x + " ");
+            stringBuilder.append(x).append(" ");
         }
-        return string;
+        return stringBuilder.toString();
     }
 }
