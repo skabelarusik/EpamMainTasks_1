@@ -6,7 +6,7 @@ import static by.epam.maintasks1.krupin.MainTask.model.logic.VectorActioner.chec
 import static by.epam.maintasks1.krupin.MainTask.model.logic.VectorChecker.checkNullVector;
 import static by.epam.maintasks1.krupin.MainTask.model.logic.VectorChecker.isSortVector;
 
-public class SorterVectors {
+public class VectorSorter {
 
 
     public static VectorDouble sortBubbleDecrise(VectorDouble vector) throws Exception {
