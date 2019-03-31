@@ -19,10 +19,12 @@ public class VectorDouble {
         this.vector = new double[n];
     }
 
-    public VectorDouble(VectorDouble vectorDouble){
-        this.vector = vectorDouble.getVector();
+    public VectorDouble(VectorDouble vectorDouble) throws Exception {
+        vector = new double[vectorDouble.size()];
+        for(int i = 0; i < vectorDouble.size(); i++){
+            vector[i] = new Double(vectorDouble.getElement(i));
+        }
     }
-
 
     public double[] getVector() {
         return vector;
@@ -56,19 +58,13 @@ public class VectorDouble {
         return vector[numb];
     }
 
-    //Does vector have this element?
-    private void checkIndex(int a) throws Exception {
-        if(a < 0 || a >= vector.length){
-            throw new Exception("Wrong number");
-        }
-    }
 
     @Override
     public String toString() {
-        String string = "";
+        StringBuilder stringBuilder = new StringBuilder();
         for(double x : vector){
-            string += (x + " ");
+            stringBuilder.append(x).append(" ");
         }
-        return string;
+        return stringBuilder.toString();
     }
 }
