@@ -16,7 +16,6 @@ public class ActionerWithMatrixTest {
     @Test
     public void isMatrixSimetricOnMainDiagonalTest(){
         assertTrue(ActionerWithMatrix.isMatrixSimmetricOnMainDiaginal(new Matrix(ParamForTest.matrOneElement)));
-        assertTrue(ActionerWithMatrix.isMatrixSimmetricOnMainDiaginal(new Matrix(ParamForTest.matrSquareSimm)));
     }
 
     @Test(expected = Exception.class)
