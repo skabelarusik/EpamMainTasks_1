@@ -2,10 +2,10 @@ package by.epam.maintasks1.krupin.MainTask.model.logic;
 
 import by.epam.maintasks1.krupin.MainTask.model.data.VectorDouble;
 
-import static by.epam.maintasks1.krupin.MainTask.model.logic.CheckerVectors.checkNullVector;
-import static by.epam.maintasks1.krupin.MainTask.model.logic.CheckerVectors.isSortVector;
+import static by.epam.maintasks1.krupin.MainTask.model.logic.VectorChecker.checkNullVector;
+import static by.epam.maintasks1.krupin.MainTask.model.logic.VectorChecker.isSortVector;
 
-public class FinderForVectorElements {
+public class VectorElementsFinder {
 
 
     public static double findMaxElement(VectorDouble vector) throws Exception {
