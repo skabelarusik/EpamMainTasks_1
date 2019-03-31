@@ -4,13 +4,13 @@ import by.epam.maintasks1.krupin.AdditionalTask.model.data.Matrix;
 
 import java.sql.SQLOutput;
 
-public class ActionerWithMatrix {
+public class MatrixActioner {
 
 
     public static boolean isMatrixSimmetricOnMainDiaginal(Matrix matrix) {
         boolean check = false;
 
-        if (CheckerForMatrix.isSquareMatrix(matrix)) {
+        if (MatrixChecker.isSquareMatrix(matrix)) {
             if (matrix.getMatr().length == 1) {
                 check = true;
             } else {
@@ -32,11 +32,11 @@ public class ActionerWithMatrix {
     }
 
     public static Matrix transposeMatrix(Matrix matrix) throws Exception {
-        if (CheckerForMatrix.checkIsMatrixNull(matrix)) {
+        if (MatrixChecker.checkIsMatrixNull(matrix)) {
            throw  new Exception("Error, matrix is null");
         }
 
-        if (CheckerForMatrix.isSquareMatrix(matrix) == false) {
+        if (MatrixChecker.isSquareMatrix(matrix) == false) {
 
            throw  new Exception("Error, matrix is not square");
         }
