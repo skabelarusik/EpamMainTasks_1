@@ -3,7 +3,7 @@ package by.epam.maintasks1.krupin.MainTask.model.logic;
 import by.epam.maintasks1.krupin.MainTask.model.data.VectorDouble;
 import by.epam.maintasks1.krupin.MainTask.model.data.VectorInt;
 
-public class CheckerVectors {
+public class VectorChecker {
 
     //check double vector
     public static void checkNullVector(VectorDouble vector) throws Exception {
