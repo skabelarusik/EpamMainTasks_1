@@ -1,6 +1,6 @@
 package by.epam.maintasks1.krupin.AdditionalTask.model.logic;
 
-public class ParamForTest {
+public class ParamTest {
 
     protected static double delta = 0.0006;
     protected static double [][] matr = {{2, 3.9, -6},{100, -900.566, 0},{-1000, 1500, -45},{0,0,0}};
