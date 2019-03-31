@@ -15,7 +15,6 @@ public class CheckerForMatrixTest {
     @Test
     public void isSquareMatrixTest(){
         assertTrue(CheckerForMatrix.isSquareMatrix(new Matrix(ParamForTest.matrSquareSimm)));
-        assertFalse(CheckerForMatrix.isSquareMatrix(new Matrix(ParamForTest.matr)));
     }
 
 }
