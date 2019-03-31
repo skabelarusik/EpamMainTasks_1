@@ -2,10 +2,10 @@ package by.epam.maintasks1.krupin.AdditionalTask.model.logic;
 
 import by.epam.maintasks1.krupin.AdditionalTask.model.data.Matrix;
 
-public class FinderForMatrix {
+public class MatrixFinder {
 
     public static double findMaxElement(Matrix matrix) throws Exception {
-        if(CheckerForMatrix.checkIsMatrixNull(matrix)){
+        if(MatrixChecker.checkIsMatrixNull(matrix)){
             throw new Exception("Null matrix");
         }
 
@@ -23,7 +23,7 @@ public class FinderForMatrix {
     }
 
     public static double findMinElement(Matrix matrix) throws Exception {
-        if(CheckerForMatrix.checkIsMatrixNull(matrix)){
+        if(MatrixChecker.checkIsMatrixNull(matrix)){
             throw new Exception("Null matrix");
         }
 
