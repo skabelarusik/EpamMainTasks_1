@@ -3,9 +3,9 @@ package by.epam.maintasks1.krupin.MainTask.model.logic;
 import by.epam.maintasks1.krupin.MainTask.model.data.VectorDouble;
 import by.epam.maintasks1.krupin.MainTask.model.data.VectorInt;
 
-import static by.epam.maintasks1.krupin.MainTask.model.logic.CheckerVectors.*;
+import static by.epam.maintasks1.krupin.MainTask.model.logic.VectorChecker.*;
 
-public class ActionerWithVector {
+public class VectorActioner {
 
 
     public static double findAverageAriph(VectorDouble vector) throws Exception {
