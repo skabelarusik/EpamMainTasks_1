@@ -11,14 +11,25 @@ public class Matrix {
         matr = new double[x][y];
     }
 
-    public Matrix(double[][] matr) {
-
-        this.matr = matr;
+      public Matrix(double[][] matrix) {
+        matr = new double[matrix.length][matrix[matrix.length-1].length];
+        for(int i = 0; i < matrix.length ; i++){
+            for(int j=0; j<matrix[matrix.length-1].length; j++){
+                matr[i][j] = new Double(matrix[i][j]);
+            }
+        }
     }
 
     public Matrix(Matrix matrix){
-        matr = matrix.getMatr();
+        matr = new double[matrix.getMatr().length][matrix.getMatr()[matrix.getMatr().length-1].length];
+
+        for(int i = 0; i < matrix.getMatr().length ; i++){
+            for(int j=0; j<matrix.getMatr()[matrix.getMatr().length-1].length; j++){
+                matr[i][j] = new Double(matrix.getMatr()[i][j]);
+            }
+        }
     }
+
 
     public void setElements(int x, int y, double value) {
         if (checkRangeXY(x, y)) {
@@ -38,41 +49,18 @@ public class Matrix {
         return matr;
     }
 
-    public boolean checkRangeX(int x) {
-        boolean check = true;
-
-        if (matr.length < x) {
-            check = false;
-        }
-
-        return check;
-    }
-
-    public boolean checkRangeXY(int x, int y) {
-        boolean check = true;
-        if(x >= 0 && y >= 0) {
-            if (matr[x].length <= y || matr.length <= x) {
-                 check = false;
-            }
-        }else{
-            check = false;
-        }
-
-        return check;
-    }
-
     @Override
     public String toString() {
-        String res = "";
+        StringBuilder stringBuilder = new StringBuilder();
 
         for (int i = 0; i < matr.length; i++) {
             for (int j = 0; j < matr[i].length; j++) {
-                res += matr[i][j] + " ";
+                stringBuilder.append(matr[i][j]).append(" ");
             }
-            res += "\n";
+            stringBuilder.append("\n");
         }
 
-        return res;
+        return stringBuilder.toString();
     }
 
 
