@@ -8,5 +8,9 @@ public class ShowVector {
 
         System.out.println(vectorDouble);
     }
+    
+      public void showMatrix(Matrix matrix){
+        System.out.println(matrix.toString());
+    }
 
 }
