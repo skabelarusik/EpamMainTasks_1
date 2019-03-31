@@ -2,9 +2,9 @@ package by.epam.maintasks1.krupin.MainTask.model.logic;
 
 import by.epam.maintasks1.krupin.MainTask.model.data.VectorDouble;
 
-import static by.epam.maintasks1.krupin.MainTask.model.logic.ActionerWithVector.checkAreVectorsSort;
-import static by.epam.maintasks1.krupin.MainTask.model.logic.CheckerVectors.checkNullVector;
-import static by.epam.maintasks1.krupin.MainTask.model.logic.CheckerVectors.isSortVector;
+import static by.epam.maintasks1.krupin.MainTask.model.logic.VectorActioner.checkAreVectorsSort;
+import static by.epam.maintasks1.krupin.MainTask.model.logic.VectorChecker.checkNullVector;
+import static by.epam.maintasks1.krupin.MainTask.model.logic.VectorChecker.isSortVector;
 
 public class SorterVectors {
 
