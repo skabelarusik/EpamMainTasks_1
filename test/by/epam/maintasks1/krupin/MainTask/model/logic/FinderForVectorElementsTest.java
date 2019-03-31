@@ -11,17 +11,8 @@ public class FinderForVectorElementsTest {
     @Test
     public void testFindMaxElement() throws Exception {
         double expected1 = 10000.76;
-        double expected2 = 89;
-        double expected3 = 7600;
-        double expected4 = 1;
 
         assertEquals(expected1, FinderForVectorElements.findMaxElement(new VectorDouble(ParametrsForActionTest.mas1)),
-                ParametrsForActionTest.delta);
-        assertEquals(expected2, FinderForVectorElements.findMaxElement(new VectorDouble(ParametrsForActionTest.mas2)),
-                ParametrsForActionTest.delta);
-        assertEquals(expected3, FinderForVectorElements.findMaxElement(new VectorDouble(ParametrsForActionTest.mas3)),
-                ParametrsForActionTest.delta);
-        assertEquals(expected4, FinderForVectorElements.findMaxElement(new VectorDouble(ParametrsForActionTest.mas4)),
                 ParametrsForActionTest.delta);
     }
 
@@ -33,18 +24,10 @@ public class FinderForVectorElementsTest {
     @Test
     public void testFindMinElement() throws Exception {
         double expected1 = -5000;
-        double expected2 = -600;
-        double expected3 = -4500;
-        double expected4 = 1;
 
         assertEquals(expected1, FinderForVectorElements.findMinElement(new VectorDouble(ParametrsForActionTest.mas1)),
                 ParametrsForActionTest.delta);
-        assertEquals(expected2, FinderForVectorElements.findMinElement(new VectorDouble(ParametrsForActionTest.mas2)),
-                ParametrsForActionTest.delta);
-        assertEquals(expected3, FinderForVectorElements.findMinElement(new VectorDouble(ParametrsForActionTest.mas3)),
-                ParametrsForActionTest.delta);
-        assertEquals(expected4, FinderForVectorElements.findMinElement(new VectorDouble(ParametrsForActionTest.mas4)),
-                ParametrsForActionTest.delta);
+
     }
 
     @Test(expected = Exception.class)
@@ -55,17 +38,8 @@ public class FinderForVectorElementsTest {
     @Test
     public void testFindAverageAriph() throws Exception {
         double expected1 = 976.045;
-        double expected2 = -155.6666666666667;
-        double expected3 = 1550;
-        double expected4 = 1;
 
         assertEquals(expected1, ActionerWithVector.findAverageAriph(new VectorDouble(ParametrsForActionTest.mas1)),
-                ParametrsForActionTest.delta);
-        assertEquals(expected2, ActionerWithVector.findAverageAriph(new VectorDouble(ParametrsForActionTest.mas2)),
-                ParametrsForActionTest.delta);
-        assertEquals(expected3, ActionerWithVector.findAverageAriph(new VectorDouble(ParametrsForActionTest.mas3)),
-                ParametrsForActionTest.delta);
-        assertEquals(expected4, ActionerWithVector.findAverageAriph(new VectorDouble(ParametrsForActionTest.mas4)),
                 ParametrsForActionTest.delta);
     }
 
@@ -77,14 +51,8 @@ public class FinderForVectorElementsTest {
     @Test
     public void testFindAverageGeometric() throws Exception {
         double expected1 = 3.3097509196;
-        double expected2 = 2.44948974;
-        double expected5 = 7;
 
         assertEquals(expected1, ActionerWithVector.findAverageGeometr(new VectorInt(ParametrsForActionTest.mas01)),
-                ParametrsForActionTest.delta);
-        assertEquals(expected2, ActionerWithVector.findAverageGeometr(new VectorInt(ParametrsForActionTest.mas02)),
-                ParametrsForActionTest.delta);
-        assertEquals(expected5, ActionerWithVector.findAverageGeometr(new VectorInt(ParametrsForActionTest.mas05)),
                 ParametrsForActionTest.delta);
     }
 
@@ -106,8 +74,7 @@ public class FinderForVectorElementsTest {
         double expected = -1;
         assertEquals(expected, FinderForVectorElements.findLocalMaximum(new VectorDouble(ParametrsForActionTest.mas2)),
                 ParametrsForActionTest.delta);
-        assertEquals(expected, FinderForVectorElements.findLocalMaximum(new VectorDouble(ParametrsForActionTest.masIsSortDecrise)),
-                ParametrsForActionTest.delta);
+
     }
 
     @Test(expected = Exception.class)
@@ -124,11 +91,9 @@ public class FinderForVectorElementsTest {
     @Test
     public void testFindElementLineSearch() throws Exception {
         boolean expexted = true;
-        boolean expected1 = false;
 
         assertEquals(expexted, FinderForVectorElements.findElementLineSearch(new VectorDouble(ParametrsForActionTest.mas3),
                 ParametrsForActionTest.a4));
-        assertEquals(expected1, FinderForVectorElements.findElementLineSearch(new VectorDouble(ParametrsForActionTest.mas3),
-                ParametrsForActionTest.a));
+
     }
 }
