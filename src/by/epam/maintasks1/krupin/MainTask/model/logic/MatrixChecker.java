@@ -2,7 +2,7 @@ package by.epam.maintasks1.krupin.AdditionalTask.model.logic;
 
 import by.epam.maintasks1.krupin.AdditionalTask.model.data.Matrix;
 
-public class CheckerForMatrix {
+public class MatrixChecker {
 
     public static boolean checkIsMatrixNull(Matrix matrix){
         boolean check = false;
