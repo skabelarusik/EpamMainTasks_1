@@ -16,12 +16,10 @@ public class FinderForMatrixTest {
     @Test
     public void testFindMaxElement() throws Exception {
         double expected = 1500.0;
-        double expected2 = 9;
 
         assertEquals(expected, FinderForMatrix.findMaxElement(new Matrix(ParamForTest.matr)),
                 ParamForTest.delta);
-        assertEquals(expected2, FinderForMatrix.findMaxElement(new Matrix(ParamForTest.matrSquare)),
-                ParamForTest.delta);
+
     }
 
     @Test(expected = Exception.class)
@@ -32,11 +30,9 @@ public class FinderForMatrixTest {
     @Test
     public void testFindMinElement() throws Exception {
         double expected = -1000;
-        double expected2 = -5;
 
         assertEquals(expected, FinderForMatrix.findMinElement(new Matrix(ParamForTest.matr)),
                 ParamForTest.delta);
-        assertEquals(expected2, FinderForMatrix.findMinElement(new Matrix(ParamForTest.matrSquare)),
-                ParamForTest.delta);
+
     }
 }
